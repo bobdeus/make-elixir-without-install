@@ -1,0 +1,13 @@
+# Version of docker-compose.
+version: '3'
+
+# Containers we're going to run.
+services:
+   elixir:
+      # We use the predefined Postgres image.
+      build: .
+      volumes:
+         - ./:/app
+# Define the volumes.
+volumes:
+   mydata:
